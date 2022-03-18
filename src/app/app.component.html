@@ -1,0 +1,24 @@
+<h3>Multiplos de 3</h3>
+<hr>
+<form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="" >
+
+  <div class="inputSection">
+  
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Cargar el archivo de numeros</label>
+      <input type="file" name="archivo" (change)="fileChanged($event)" class="form-control-file">
+    </div>
+    <!-- <div *ngIf="mensaje">{{mensaje}}</div> -->
+
+    <h5>Contenido texto cargado:</h5>
+    <hr>
+    <div *ngFor="let linea of filesLines">{{linea}}</div>
+
+  </div>
+
+  <h4 class="mt-2">Resultado:</h4>
+  <hr>
+  <div *ngFor="let item of resultado">{{item}}</div>
+
+
+</form>
